@@ -13,10 +13,16 @@ import java.util.Random;
  */
 public class Paladin extends Personaje {
     
+     
     static public final int guillotinaProb = 5;
+    public static final int ataquePaladinBase=20;
 
     public Paladin(int pt_vida, int pt_ataque, String nombre) {
         super(pt_vida, pt_ataque, nombre);
+    }
+
+    public Paladin(String nombre) {
+        super(Personaje.vidaMax, ataquePaladinBase, nombre);
     }
 
     @Override

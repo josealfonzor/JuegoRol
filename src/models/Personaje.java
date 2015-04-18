@@ -13,7 +13,7 @@ public class Personaje {
     
     static public final int vidaMax = 100;
     
-    private int pt_vida;
+    private int pt_vida=vidaMax;
     private int pt_ataque;
     private String nombre;
 
@@ -52,7 +52,7 @@ public class Personaje {
     
     public void atacar(Personaje objetivo){
         if(objetivo!= null && !objetivo.equals(this) && objetivo.getPt_vida()!=0)
-            objetivo.set.Pt_vida(objetivo.get.Pt_vida()-this.getPt_ataque());
+            objetivo.setPt_vida(objetivo.getPt_vida()-this.getPt_ataque());
         
     }
     

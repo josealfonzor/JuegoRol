@@ -10,21 +10,18 @@ package models;
  * @author Rafael Marcano
  */
 public class Mago extends Personaje{
-    
-    private int healPower;
 
+    public static final int healPower=20;
+    public static final int ataqueMagoBase=15;
+ 
     public Mago(int pt_vida, int pt_ataque, String nombre, int healPower) {
         super(pt_vida, pt_ataque, nombre);
-        this.healPower = healPower;
     }
 
-    public int getHealPower() {
-        return healPower;
+    public Mago(String nombre) {
+        super(Personaje.vidaMax, ataqueMagoBase, nombre);
     }
 
-    public void setHealPower(int healPower) {
-        this.healPower = healPower;
-    }
     
     public void heal (Personaje objetivo){
         if(objetivo!= null && objetivo.getPt_vida() > 0 && objetivo.getPt_vida() < Personaje.vidaMax){

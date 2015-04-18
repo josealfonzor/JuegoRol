@@ -11,8 +11,14 @@ package models;
  */
 public class Aldeano extends Personaje{
 
+    public static final int ataqueAldeanoBase=10;
+    
     public Aldeano(int pt_vida, int pt_ataque, String nombre) {
         super(pt_vida, pt_ataque, nombre);
+    }
+
+    public Aldeano(String nombre) {
+        super(Personaje.vidaMax,ataqueAldeanoBase, nombre);
     }
 
     @Override
